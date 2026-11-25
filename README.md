@@ -6,22 +6,25 @@
 
 Entry for the make.fun bounty [One-Line Office Joke Laugh-Off](https://make.fun/bounty/u-suzy-one-line-office-joke-laugh-off-f574ac73).
 
-## What it does
+## The entry
 
-`main.py` (Python 3, standard library only, no network) writes one fresh
-one-line joke about office life to `/output/entry.txt`, after a gate check
-that the text is UTF-8, 1–200 characters, a single line, and not only
-whitespace. It also runs a small self-test of the gate before writing.
+> My boss said we have unlimited PTO, which explains why nobody here has ever taken a day off.
+
+One line, 92 characters, no trailing newline. It pokes fun at the
+"unlimited PTO" perk that somehow never gets used.
+
+
+## How it works
+
+`main.py` (Python 3, standard library only, no network) writes the joke
+above to `/output/entry.txt`, creating the directory if needed. The run is
+deterministic: every invocation writes the same 92 bytes.
 
 ## Run it
 
 ```sh
 python3 main.py
 ```
-
-## The joke
-
-> My boss said we have unlimited PTO, which explains why nobody here has ever taken a day off.
 
 ## License
 
